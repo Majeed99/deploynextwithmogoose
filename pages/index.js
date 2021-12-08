@@ -5,7 +5,7 @@ export default function Home() {
   const [PlanetInfo, setPlanetInfo] = useState({});
   const [AllPlanets, setAllPlanets] = useState([]);
   useEffect(async () => {
-    const res = await fetch("http://localhost:3000/api/planets", {
+    const res = await fetch("/api/planets", {
       method: "GET",
     });
     const data = await res.json();
@@ -13,7 +13,7 @@ export default function Home() {
   }, []);
 
   async function addNewPlanet() {
-    const res = await fetch("http://localhost:3000/api/planets", {
+    const res = await fetch("/api/planets", {
       method: "POST",
       headers: {
         Accept: "application/json",

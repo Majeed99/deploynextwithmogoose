@@ -27,7 +27,7 @@ export default function Home() {
   }
 
   async function deletePlanet(id) {
-    const res = await fetch("http://localhost:3000/api/planets", {
+    const res = await fetch("/api/planets", {
       method: "Delete",
       headers: {
         Accept: "application/json",

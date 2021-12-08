@@ -8,6 +8,7 @@ export default function Home() {
     const res = await fetch("/api/planets", {
       method: "GET",
     });
+
     const data = await res.json();
     setAllPlanets(data.data);
   }, []);
